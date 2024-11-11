@@ -14,25 +14,32 @@ public class Main {
     public static float calculate(int numOne, int numTwo, String operation) {
         float res = -1;
         switch (operation) {
-            case "sum" -> {
+            case "sum" : {
                 res = numOne + numOne;
                 System.out.println(numOne + " + " + numTwo + " = " + res);
+                break;
             }
-            case "difference" -> {
+            case "difference" : {
                 res = numOne - numTwo;
                 System.out.println(numOne + " - " + numTwo + " = " + res);
+                break;
             }
-            case "product" -> {
+            case "product" : {
                 res = numOne * numTwo;
                 System.out.println(numOne + " * " + numTwo + " = " + res);
+                break;
             }
-            case "quotient" -> {
+            case "quotient" : {
                 if (numTwo != 0) {
                     res = (float) numOne / (float) numTwo;
                     System.out.println(numOne + " / " + numTwo + " = " + res);
-                } else System.out.println("Teilen durch 0 nicht möglich");
+                    break;
+                } else {
+                    System.out.println("Teilen durch 0 nicht möglich");
+                    break;
+                }
             }
-            default -> System.out.println("Unbekannte Operation");
+            default : System.out.println("Unbekannte Operation");
         }
         return res;
     }
